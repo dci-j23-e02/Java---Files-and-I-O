@@ -18,19 +18,21 @@ public class Main {
 
 
     // Copy package1.txt from source to target
-    packageName = "package1.txt";
-//
-//    Files.copy(Paths.get(sourceName + File.separator + packageName),
-//        Paths.get(targetName+ File.separator + packageName),
-//        StandardCopyOption.REPLACE_EXISTING
-//        );
 
-  //  System.out.println("File '" + packageName + "' copied from '" + sourceName + "' to '" + targetName + "'");
+    packageName = "package1.txt";
+
+    Files.copy(Paths.get(sourceName + File.separator + packageName),
+        Paths.get(targetName+ File.separator + packageName),
+        StandardCopyOption.REPLACE_EXISTING
+        );
+
+    System.out.println("File '" + packageName + "' copied from '" + sourceName + "' to '" + targetName + "'");
 
 
     // Delete package1.txt from source
-  //  Files.delete(Paths.get(sourceName + File.separator + packageName));
-  //  System.out.println("File '" + packageName + "' deleted from '" + sourceName + "'");
+
+    Files.delete(Paths.get(sourceName + File.separator + packageName));
+    System.out.println("File '" + packageName + "' deleted from '" + sourceName + "'");
 
     // Move package2.txt from target to older ( creates older directory before move )
 
